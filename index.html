@@ -1,110 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+  <!-- this is here to speed up the font loading time (so it wont be blank before it loads as much) -->
+<style>@font-face {font-family: 'WiiShop';src: url('/font/nintendo_NTLGDB_001.ttf') format('truetype');}</style>
+
   <title>YTS site</title>
   <link rel="icon" type="image/x-ico" href="favicon.ico">
-  <style>
-    body {
-      font-family: 'WiiShop', sans-serif;
-      background-image: url(stars.gif);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      text-align: center;
-    }
-
-    h1, h2, h3, p, div {
-      text-align: center;
-    }
-
-    img {
-      display: block;
-      margin: 10px auto;
-    }
-
-    .console-imgs {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 15px;
-    }
-
-    .console-imgs img {
-      width: 96px;
-      height: 134px;
-    }
-
-    div.content-box {
-      margin: auto;
-      width: 700px;
-      background-color: #6df8fd;
-      padding: 20px;
-    }
-
-    ul {
-      list-style-type: none;
-      margin: auto;
-      width: fit-content;
-      padding: 0;
-      overflow: hidden;
-      background-color: rgb(121, 201, 255);
-    }
-
-    li {
-      float: left;
-    }
-
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 13px;
-      text-decoration: none;
-    }
-
-    li a:hover {
-      background-color: #6df8fd;
-    }
-
-    a {
-      color: rgb(73, 158, 255);
-      background-color: transparent;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: rgb(98, 139, 167);
-    }
-
-    a:visited {
-      color: rgb(73, 158, 255);
-    }
-
-    a:active {
-      color: rgb(146, 166, 231);
-    }
-
-    @font-face {
-      font-family: 'WiiShop';
-      src: url('nintendo_NTLGDB_001.ttf') format('truetype');
-    }
-
-    table, th, td {
-      border: 1px solid greenyellow;
-      border-collapse: collapse;
-      margin: auto;
-    }
-
-    th, td {
-      background-color: rgba(4, 78, 4, 0.938);
-      padding: 8px;
-    }
-
-    tr:hover {
-      background-color: rgb(135, 255, 205);
-    }
-  </style>
+  <link rel="stylesheet" href="/css/general.css">
+  <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
 
@@ -135,9 +38,9 @@
   <p style="color: rgb(245, 248, 78);"><b>Below is a link to buy my favorite game!</b></p>
   <button onclick="document.location='https://www.xbox.com/en-us/games/store/LEGO-Dimensions/BTQNJ9JMV0FZ?msockid=0dc63cbf8a64677d283929308bb2663d'">LEGO-Dimensions</button>
 
-  <img src="Lego Dimensions.jpg" alt="Lego Dimensions image" style="width:128px;height:128px;">
+  <img src="/images/Lego Dimensions.jpg" alt="Lego Dimensions image" style="width:128px;height:128px;">
   <a href="https://wiishopchannel.net" target="_blank">
-    <img src="wii-shop.gif" title="oh no" alt="Wii Shop Channel" width="88" height="31">
+    <img src="/images/wii-shop.gif" title="oh no" alt="Wii Shop Channel" width="88" height="31">
   </a>
 
   <hr>
@@ -145,7 +48,7 @@
   <h2 style="color: rgb(160, 247, 103);"><b>Some interactive fun!</b></h2>
   <p style="color: rgb(160, 230, 91);"><b>You see those Lego Dimensions packs down there? If you click one of them you will be leaded to a detailed description of the pack! [only the sonic one works for now]</b></p>
 
-  <img src="product2-removebg-preview (1).jpg" alt="Interactive image" usemap="#packs" width="320" height="300">
+  <img src="/images/product2-removebg-preview (1).jpg" alt="Interactive image" usemap="#packs" width="320" height="300">
 
   <map name="packs">
     <area shape="poly"
@@ -193,9 +96,9 @@
     <h3 style="color: rgb(221, 35, 2);">My favorite video game consoles</h3>
     <p>I've got a lot of video game consoles, but my favorites are the Nintendo DSi, Nintendo Wii, and Xbox 360. You can probably tell that I really like retro consoles.<sub>So retro!</sub></p>
     <div class="console-imgs">
-      <img src="DSi.png" alt="Nintendo DSi">
-      <img src="wii.png" alt="Nintendo Wii">
-      <img src="Xbox 360.png" alt="Xbox 360">
+      <img src="/images/DSi.png" alt="Nintendo DSi">
+      <img src="/images/wii.png" alt="Nintendo Wii">
+      <img src="/images/Xbox 360.png" alt="Xbox 360">
     </div>
   </div>
 </body>
