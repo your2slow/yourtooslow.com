@@ -1,0 +1,65 @@
+/* styles that are shared across pages */
+
+@font-face {
+  font-family: 'WiiShop';
+  src: url('/font/nintendo_NTLGDB_001.ttf') format('truetype');
+}
+
+body {
+  font-family: 'WiiShop', sans-serif;
+  background-image: url(/images/stars.gif);
+  background-color:#030303; /* incase the image doesn't load */
+  background-repeat: repeat-y;
+  background-position: top center;
+  background-size: contain;
+  text-align: center;
+  overflow-x:hidden; /* prevent any overflow to the right/left */
+  min-height: 100vh;
+}
+
+h1, h2, h3, p, div {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: auto;
+  width: fit-content;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(121, 201, 255);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 13px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #6df8fd;
+}
+
+a {
+  color: rgb(73, 158, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(98, 139, 167);
+}
+
+a:visited {
+  color: rgb(73, 158, 255);
+}
+
+a:active {
+  color: rgb(146, 166, 231);
+}
