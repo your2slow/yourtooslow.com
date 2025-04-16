@@ -8,21 +8,22 @@ img {
 .console-imgs {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 1rem;
   flex-wrap: wrap;
-  margin-top: 15px;
+  margin-top: 1rem;
 }
 
 .console-imgs img {
+  max-width: 100%;
   width: 96px;
-  height: 134px;
+  height: 150px;
 }
 
 div.content-box {
-  margin: auto;
-  width: 700px;
+  width: 100%;
+  max-width:100%;
   background-color: #6df8fd;
-  padding: 20px;
+  padding: 1rem;
 }
 
 table, th, td {
