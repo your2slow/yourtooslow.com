@@ -21,32 +21,31 @@ h1, h2, h3, p, div {
   text-align: center;
 }
 
-/* NAVIGATION BAR STYLING */
-ul.navbar {
-  list-style-type: none;
-  margin: auto;
-  padding: 0;
+/* stupid navigation bar styling :gr: */
+.navbar {
   display: flex;
-  justify-content: center;
-  background-color: rgb(121, 201, 255);
-  flex-wrap: wrap; 
+  justify-content: center; 
+  align-items: center;
+  gap: 20px;               
+  list-style: none;         
+  padding: 0;
+  margin: 20px 0;
+  flex-wrap: wrap;          
+  overflow-x: auto;        
+  white-space: nowrap;
 }
 
-ul.navbar li {
-  margin: 0 10px;
-}
-
-ul.navbar li a {
-  display: block;
-  padding: 13px;
+.navbar li a {
   text-decoration: none;
-  color: white;
-  text-align: center;
+  color: #3399ff; 
+  font-size: 1.2em;
+  font-family: 'WiiShop', sans-serif; 
 }
 
-ul.navbar li a:hover {
-  background-color: #6df8fd;
+.navbar li a:hover {
+  text-decoration: underline;
 }
+
 
 a {
   color: rgb(73, 158, 255);
