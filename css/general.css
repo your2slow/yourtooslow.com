@@ -66,20 +66,3 @@ a:active {
   color: rgb(146, 166, 231);
 }
 
-@media (max-width: 600px) {
-  ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  ul li {
-    float: none;
-    width: 100%;
-  }
-
-  ul li a {
-    width: 100%;
-    text-align: center;
-  }
-}
