@@ -37,14 +37,26 @@ h1, h2, h3, p, div {
 
 .navbar li a {
   text-decoration: none;
-  color: #3399ff; 
+  color: #3399ff;
   font-size: 1.2em;
-  font-family: 'WiiShop', sans-serif; 
+  font-family: 'WiiShop', sans-serif;
+
+  border: 2px solid #3399ff;  
+  border-radius: 8px;         
+  padding: 8px 14px;          
+  transition: 0.3s ease;      
+  display: inline-block;      
 }
 
 .navbar li a:hover {
-  text-decoration: underline;
+  background-color: #3399ff;  
+  color: white;               
 }
+
+.navbar li {
+  margin: 5px;
+}
+
 
 
 a {
