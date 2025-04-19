@@ -6,7 +6,8 @@ function checkSecret() {
       test: "secret-htmls/test.html",
       dsi: "secret-htmls/dsi.html",
       wii: "secret-htmls/wii.html",
-      miiverse:"secret-htmls/miiverse.html"
+      miiverse:"secret-htmls/miiverse.html",
+       let_me_in:"secrets.html"
     };
   
     const accessMessage = document.getElementById("accessMessage");
