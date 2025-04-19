@@ -4,7 +4,9 @@ function checkSecret() {
   
     const secretPages = {
       test: "secret-htmls/test.html",
-      dsi: "secret-htmls/dsi.html"
+      dsi: "secret-htmls/dsi.html",
+      wii: "secret-htmls/wii.html",
+      miiverse:"secret-htmls/miiverse.html"
     };
   
     const accessMessage = document.getElementById("accessMessage");
