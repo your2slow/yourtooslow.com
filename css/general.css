@@ -155,8 +155,8 @@ body {
   }
 
   .miiverse-nav img {
-    width: 36px;
-    height: 36px;
+    width: 50px;
+    height: 50px;
     margin-bottom: 4px;
   }
 
@@ -168,10 +168,10 @@ body {
   }
 
   .miiverse-header {
-    margin-left: 0;
-    width: 100%;
+    margin: 0;
+    width: 90%;
+    float: right;
     font-size: 11px;
-    padding: 6px 10px;
     white-space: normal;
     text-align: center;
     line-height: 1.2;
@@ -184,7 +184,7 @@ body {
   }
 
   .miiverse-nav li {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #0000001a;
     margin-bottom: 6px;
   }
 
@@ -247,8 +247,8 @@ body {
 }
 
 .mobile-bottom-nav img {
-  width: 34px;
-  height: 34px;
+  width: 50px;
+  height: 50px;
   margin-bottom: 2px;
   object-fit: contain;
 }
@@ -258,8 +258,8 @@ body {
   content: "";
   position: absolute;
   right: 0;
-  top: 25%;
-  height: 50%;
+  top: 10%;
+  height: 75%;
   width: 1px;
   background-color: rgba(0, 0, 0, 0.1);
 }
