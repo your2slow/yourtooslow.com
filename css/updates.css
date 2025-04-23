@@ -1,0 +1,46 @@
+.updates-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.update-entry {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.update-entry:hover {
+  background-color: #f1f1f1;
+}
+
+.update-mii {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.update-text {
+  font-size: 18px;
+  color: #333;
+}
+
+.new-tag {
+    background-color: #82f28f;
+    color: #0a6f2c;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 6px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }

@@ -1,4 +1,3 @@
-/* styles that are shared across pages */
 
 @font-face {
   font-family: 'WiiShop';
@@ -7,99 +6,404 @@
 
 body {
   font-family: 'WiiShop', sans-serif;
-  background-image: url(/images/stars.gif);
-  background-color:#030303;
-  background-repeat: repeat-y;
-  background-position: top center;
-  background-size: contain;
-  text-align: center;
-  overflow-x:hidden; 
-  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  background: url('../images/miiversebg.png');
+  background-repeat: repeat;
+  background-color: #f0f0f0;
 }
 
-h1, h2, h3, p, div {
-  text-align: center;
-}
-
-/* stupid navigation bar styling :gr: */
-.navbar {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  gap: 20px;               
-  list-style: none;         
-  padding: 0;
-  margin: 20px 0;
-  flex-wrap: wrap;          
-  overflow-x: auto;        
-  white-space: nowrap;
-}
-
-.navbar li a {
-  text-decoration: none;
-  color: #3399ff;
-  font-size: 1.2em;
-  font-family: 'WiiShop', sans-serif;
-
-  border: 2px solid #3399ff;  
-  border-radius: 8px;         
-  padding: 8px 14px;          
-  transition: 0.3s ease;      
-  display: inline-block;      
-}
-
-.navbar li a:hover {
-  background-color: #3399ff;  
-  color: white;               
-}
-
-.navbar li {
-  margin: 5px;
-}
-
-
-
-a {
-  color: rgb(73, 158, 255);
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:hover {
-  color: rgb(98, 139, 167);
-}
-
-a:visited {
-  color: rgb(73, 158, 255);
-}
-
-a:active {
-  color: rgb(146, 166, 231);
-}
-
-#loading-icon {
-  position: fixed;
-  top: 45px;
-  left: 15px;
-  width: 120px;
-  height: 100px;
-  display: none;
-  animation: spin 1s linear infinite;
-  z-index: 9999;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.loading-fade::before {
-  content: '';
+.miiverse-nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 9998;
+  width: 160px;
+  height: 100vh;
+  background-color: #f4f4f4;
+  border-right: 2px solid #ccc;
+  border-radius: 0 30px 30px 0;
+  padding: 15px 0; 
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  overflow: hidden; 
 }
+
+.miiverse-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.miiverse-nav li {
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); 
+  padding-bottom: 6px;
+}
+
+.miiverse-nav li:last-child {
+  border-bottom: none;
+}
+
+.miiverse-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 10px 5px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.miiverse-nav li.active a,
+.miiverse-nav a:hover {
+  color: #00c200; 
+  background-color: transparent;
+}
+
+.miiverse-nav img {
+  width: auto;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 6px;
+}
+
+.page-content {
+  position: relative;
+  margin-left: 240px;
+  margin-top: 20px;
+  padding: 20px;    
+  box-sizing: border-box;
+  width: calc(100% - 240px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  justify-content: flex-start;
+  text-align: center;
+}
+
+.mobile-bottom-nav {
+  display: none;
+}
+
+.miiverse-header {
+  background-color: #00c200;
+  color: white;
+  padding: 5px 30px;
+  border-bottom: 2px solid #00a000;
+  font-size: 13px;
+  font-weight: bold;
+  position: relative;
+  margin-left: 240px;
+  margin-top: 0px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 250px); 
+  white-space: nowrap; 
+}
+
+.miiverse-header.blue {
+  background-color: #00aaff; 
+  border-bottom: 2px solid #0088cc;
+}
+
+.miiverse-header.red {
+  background-color: #ff4d4d;
+  border-bottom: 2px solid #cc0000;
+}
+
+.miiverse-header.yellow {
+  background-color: #ffee58;
+  border-bottom: 2px solid #e6c200;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .miiverse-nav {
+    display: none; /* Hide sidebar nav */
+  }
+
+  .miiverse-nav a {
+    width: 60px;
+    height: auto;
+    font-size: 11px;
+    padding: 5px 3px;
+  }
+
+  .miiverse-nav img {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 4px;
+  }
+
+  .page-content {
+    margin-left: 0; /* No sidebar on mobile */
+    margin-top: 4px; 
+    padding: 6px 15px 76px; /* Add bottom space for nav */
+    width: 100%;
+  }
+
+  .miiverse-header {
+    margin-left: 0;
+    width: 100%;
+    font-size: 11px;
+    padding: 6px 10px;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .miiverse-header span {
+    white-space: normal;
+    text-overflow: unset;
+    overflow: visible;
+  }
+
+  .miiverse-nav li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 6px;
+  }
+
+  /* Bottom mobile nav */
+  .miiverse-bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background-color: #f4f4f4;
+    border-top: 2px solid #ccc;
+    z-index: 999;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .miiverse-bottom-nav a {
+    text-decoration: none;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    width: 20%;
+  }
+
+  .miiverse-bottom-nav a img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 2px;
+  }
+
+ .mobile-bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f4f4f4;
+  border-top: 1px solid #ccc;
+  padding: 6px 0;
+  z-index: 999;
+}
+
+.mobile-bottom-nav a {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 11px;
+  color: #000;
+  position: relative;
+}
+
+.mobile-bottom-nav img {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 2px;
+  object-fit: contain;
+}
+
+/* separator line */
+.mobile-bottom-nav a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 25%;
+  height: 50%;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+  .miiverse-nav {
+    display: none;
+  }
+
+}
+
+.miiverse-tile-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.miiverse-tile-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.miiverse-tile {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 220px;
+  border-bottom: 1px dotted #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+
+.miiverse-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.miiverse-tile-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  margin-right: 10px;
+}
+
+.miiverse-tile-text {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.game-tile-link {
+  text-decoration: none; 
+  color: inherit;        
+  display: inline-block;
+}
+
+.dot-divider {
+  width: 100%;
+  height: 12px;
+  background-image: radial-gradient(#c0c0c0 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+  background-repeat: repeat-x;
+  margin-top: -10px; 
+  margin-bottom: 25px;
+}
+
+.mii-speech-section {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.speech-profile-card {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.speech-profile-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.speech-bubble {
+  position: relative;
+  background-color: #d6f5d6;
+  border-radius: 12px;
+  padding: 15px;
+  margin-left: 20px;
+  max-width: 400px;
+  font-size: 16px;
+  color: #333;
+}
+
+.speech-bubble::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 12px solid #d6f5d6;
+}
+  #loading-icon {
+    position: fixed;
+    top: 45px;
+    left: 15px;
+    width: 120px;
+    height: 100px;
+    display: none;
+    animation: spin 1s linear infinite;
+    z-index: 9999;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .loading-fade {
+    position: relative;
+  }
+  
+  .loading-fade::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.5);
+    z-index: 9998;
+  } 
