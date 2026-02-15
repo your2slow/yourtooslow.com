@@ -7,7 +7,8 @@ function checkSecret() {
       dsi: "secret-htmls/dsi.html",
       wii:"secret-htmls/wii.html",
       credits:"secret-htmls/credits.html",
-      let_me_in:"secrets.html"
+      let_me_in:"secrets.html",
+     coming_soon:"comingsoon.html"
     };
   
     const accessMessage = document.getElementById("accessMessage");
@@ -44,4 +45,5 @@ function checkSecret() {
     }
   }
   
+
   
